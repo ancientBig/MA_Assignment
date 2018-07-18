@@ -6,7 +6,6 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-
         //variables
         String UserName="";
         String GreetingMessage="";
@@ -21,7 +20,7 @@ public class Main {
 
         //generate App Age
         Random randomGen = new Random();
-        appAge= randomGen.nextInt((90 - 18) + 1) + 18;
+        appAge= randomGen.nextInt((90 - 18) + 1) + 18;//generate random numbers between 18 and 90
 
         //setting greeting message
         /*
