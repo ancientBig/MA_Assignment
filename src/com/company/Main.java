@@ -15,7 +15,9 @@ public class Main {
         //get user name
         Scanner inUserinput = new Scanner(System.in);
         System.out.println("please enter your name : ");
+
         UserName=inUserinput.next();
+
 
 
         //generate App Age
@@ -55,7 +57,37 @@ public class Main {
 
         //get the user age
         System.out.println("please enter your age : ");
-        UserAge= inUserinput.nextInt();
+
+        //exception
+        boolean isTrueInputName=false;
+
+        if(inUserinput.hasNextInt())
+        {
+            //System.out.println("user name ");
+            UserAge= inUserinput.nextInt();
+        }
+        else
+
+        {
+
+
+            while (isTrueInputName == false) {
+
+                System.out.println("please your enter age (integer) : ");
+                if (inUserinput.hasNextInt())
+                {
+                    UserAge= inUserinput.nextInt();
+                    isTrueInputName = true;
+                }
+                else {
+                    String dummy = inUserinput.next();
+
+                }
+            }
+
+        }
+
+
 
         //determine App age
         int ageDifference=0;
